@@ -4,5 +4,5 @@ class Album < ActiveRecord::Base
   # same as ['rock', 'rap', ect.]
 
   validates :title, presence: true
-  validates :genre, inclusion: {in: GENRES}
+  validates :genre, inclusion: {in: GENRES, message: 'is Invalid'}
 end
